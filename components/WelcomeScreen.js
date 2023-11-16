@@ -36,28 +36,36 @@ export default function WelcomeScreen() {
         <ScrollView 
             // persistentScrollbar={true} DEBUGGING
             indicatorStyle={"white"} 
-            style={{ flex: 1 }}>
+            style={welcomeStyles.container}>
             <Text
-                style={{
-                    padding: 40,
-                    fontSize: 36,
-                    color: '#EDEFEE',
-                    textAlign: 'center',
-                }}>
+                style={welcomeStyles.headerText}>
                 Welcome to Little Lemon
             </Text>
             <Text
-                style={{
-                    fontSize: 24,
-                    padding: 20,
-                    marginVertical: 8,
-                    color: '#EDEFEE',
-                    textAlign: 'center',
-                }}>
+                style={welcomeStyles.mainText}>
                 Little Lemon is a charming neighborhood bistro that serves simple food
                 and classic cocktails in a lively but casual environment. We would love
                 to hear more about your experience with us!
             </Text>
         </ScrollView>
     );
-  }
+}
+
+const welcomeStyles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
+    headerText: {
+        padding: 40,
+        fontSize: 36,
+        color: '#EDEFEE',
+        textAlign: 'center',
+    },
+    mainText: {
+        fontSize: 24,
+        padding: 20,
+        marginVertical: 8,
+        color: '#EDEFEE',
+        textAlign: 'center',
+    }, 
+});
